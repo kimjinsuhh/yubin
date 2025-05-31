@@ -19,30 +19,30 @@ body {
   text-align: center;
 }
 #image-area img {
-  width: 220px;
-  height: 220px;
+  width: min(90vw, 340px);
+  height: min(90vw, 340px);
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   margin-bottom: 16px;
 }
 #question {
-  font-size: 1.15rem;
+  font-size: clamp(0.85rem, 2.5vw, 1.05rem);
   font-weight: 600;
   color: #7c4dff;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 #options {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 .option-btn {
   background: #fff;
   border: 2px solid #b39ddb;
   border-radius: 12px;
-  padding: 12px 8px;
-  font-size: 1rem;
+  padding: 10px 6px;
+  font-size: clamp(0.85rem, 2.5vw, 1.05rem);
   color: #5e35b1;
   cursor: pointer;
   transition: background 0.2s, border 0.2s;
@@ -55,7 +55,7 @@ body {
   height: 8px;
   background: #e1bee7;
   border-radius: 8px;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   overflow: hidden;
 }
 #progress-bar {
@@ -65,7 +65,7 @@ body {
   transition: width 0.3s;
 }
 #result {
-  font-size: 1.05rem;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
   color: #333;
   padding: 32px 8px 40px 8px;
   border-radius: 28px;
@@ -75,20 +75,20 @@ body {
   margin: 0 auto 24px auto;
 }
 #result .fairy-title {
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 4vw, 1.7rem);
   font-weight: bold;
   color: #7c4dff;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 #result img {
-  width: 320px !important;
-  height: 320px !important;
+  width: min(90vw, 340px) !important;
+  height: min(90vw, 340px) !important;
   border-radius: 24px !important;
   margin-bottom: 20px !important;
   box-shadow: 0 4px 24px rgba(0,0,0,0.12) !important;
 }
 #result b {
-  font-size: 1.01em;
+  font-size: 1.08em;
   color: #5e35b1;
 }
 #restart {
@@ -124,18 +124,24 @@ body {
   }
 }
 @media (max-width: 600px) {
-  #result img {
-    width: 90vw !important;
-    height: 90vw !important;
-    max-width: 320px !important;
-    max-height: 320px !important;
+  #image-area img, #result img {
+    width: 95vw !important;
+    height: 95vw !important;
+    max-width: 340px !important;
+    max-height: 340px !important;
   }
   #result {
-    font-size: 0.98rem;
-    padding: 12px 2px 18px 2px;
+    padding: 8px 2px 12px 2px;
   }
   #result .fairy-title {
     font-size: 1.08rem;
+  }
+  #question {
+    font-size: 0.7rem;
+  }
+  .option-btn {
+    font-size: 0.7rem;
+    padding: 8px 4px;
   }
 }
 #start-screen {
