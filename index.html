@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내가 요정이라면?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="start-screen">
+      <img src="images/start.png" alt="시작화면" class="start-img">
+      <button id="start-btn">시작하기</button>
+    </div>
+    <div id="quiz" class="hidden">
+      <div id="quiz-header">
+        <button id="prev-btn" class="nav-btn">&#8592;</button>
+        <span id="quiz-title">내가 요정이라면?</span>
+        <span id="question-number"></span>
+      </div>
+      <div id="progress"></div>
+      <div id="image-area"></div>
+      <div id="question"></div>
+      <div id="options"></div>
+    </div>
+    <div id="result" class="hidden"></div>
+    <button id="restart" class="hidden">다시하기</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 

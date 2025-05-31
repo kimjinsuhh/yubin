@@ -1,0 +1,205 @@
+body {
+  background: linear-gradient(180deg, #f3e9ff 0%, #e0f7fa 100%);
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 24px 0 48px 0;
+}
+#quiz, #result {
+  background: #fff8f0;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 24px 16px 32px 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+#image-area img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  margin-bottom: 16px;
+}
+#question {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #7c4dff;
+  margin-bottom: 18px;
+}
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.option-btn {
+  background: #fff;
+  border: 2px solid #b39ddb;
+  border-radius: 12px;
+  padding: 12px 8px;
+  font-size: 1rem;
+  color: #5e35b1;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s;
+}
+.option-btn:hover {
+  background: #ede7f6;
+  border-color: #7c4dff;
+}
+#progress {
+  height: 8px;
+  background: #e1bee7;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+#progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #7c4dff 0%, #b2ebf2 100%);
+  width: 0%;
+  transition: width 0.3s;
+}
+#result {
+  font-size: 1.05rem;
+  color: #333;
+  padding: 32px 8px 40px 8px;
+  border-radius: 28px;
+  box-shadow: 0 6px 32px rgba(124,77,255,0.10);
+  background: #fffdfa;
+  max-width: 480px;
+  margin: 0 auto 24px auto;
+}
+#result .fairy-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #7c4dff;
+  margin-bottom: 12px;
+}
+#result img {
+  width: 320px !important;
+  height: 320px !important;
+  border-radius: 24px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12) !important;
+}
+#result b {
+  font-size: 1.01em;
+  color: #5e35b1;
+}
+#restart {
+  display: block;
+  margin: 0 auto;
+  background: #7c4dff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(124,77,255,0.10);
+  transition: background 0.2s;
+}
+#restart:hover {
+  background: #5e35b1;
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 8px 0 24px 0;
+  }
+  #quiz, #result {
+    padding: 12px 4px 20px 4px;
+  }
+  #image-area img {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media (max-width: 600px) {
+  #result img {
+    width: 90vw !important;
+    height: 90vw !important;
+    max-width: 320px !important;
+    max-height: 320px !important;
+  }
+  #result {
+    font-size: 0.98rem;
+    padding: 12px 2px 18px 2px;
+  }
+  #result .fairy-title {
+    font-size: 1.08rem;
+  }
+}
+#start-screen {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.start-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+#start-btn {
+  background: #7c4dff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 48px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(124,77,255,0.10);
+  transition: background 0.2s;
+}
+#start-btn:hover {
+  background: #5e35b1;
+}
+#quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 8px;
+  min-height: 32px;
+  background: #fff;
+  padding: 0 8px;
+}
+#quiz-title {
+  flex: 1;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #222;
+}
+#question-number {
+  min-width: 48px;
+  text-align: right;
+  color: #222;
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #222;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-right: 4px;
+  transition: color 0.2s;
+}
+.nav-btn:active, .nav-btn:focus {
+  color: #7c4dff;
+} 
