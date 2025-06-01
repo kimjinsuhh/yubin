@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(180deg, #f3e9ff 0%, #e0f7fa 100%);
+  background: #fff; /* 기존 linear-gradient를 #fff로 변경 */
   font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
   padding: 24px 0 48px 0;
 }
 #quiz, #result {
-  background: #fff8f0;
+  background: #fff;
   border-radius: 24px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   padding: 24px 16px 32px 16px;
@@ -40,7 +40,7 @@ body {
 .option-btn {
   background: #fff;
   border: 2px solid #b39ddb;
-  border-radius: 12px;
+  border-radius: 24px;
   padding: 12px 8px;
   font-size: 1rem;
   color: #5e35b1;
@@ -134,13 +134,17 @@ body {
 }
 #quiz-header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   font-size: 1.05rem;
   color: #7c4dff;
   font-weight: 600;
   margin-bottom: 4px;
   min-height: 24px;
+}
+#quiz-title, .quiz-title {
+  flex: 1;
+  text-align: center;
 }
 #question-number {
   letter-spacing: 1px;
